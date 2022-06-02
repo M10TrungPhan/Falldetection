@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+    Trang xem ảnh
+{% endblock %}
+
+{% block content %}
+<style>
+.button {
+  background-color: #01AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  /*text-align: center;*/
+  text-decoration: none;
+/*  display: inline-block;*/
+  font-size: 10px;
+  /*margin: 4px 2px;*/
+  border-radius:20px;
+  bottom: 200px;
+  right: 200px;
+}
+.container {
+    padding: 20px 200px;
+}
+</style>
+<body class="text-center">
+    <div class="container" style="">
+        <img width="700" height="500" src= "{{url_for('static', filename='fall/'+photo)}}"/>
+</div>
+<!-- <div class='button-return'> -->
+        <a class="btn btn-success" href="{{url_for('history_page',)}}"> Quay lại </a>
+        <!-- <button class="button"> Quay lại</button> -->
+<!-- </div> -->
+</body>
+{% endblock %}
+{{url_for('static', filename='bk.png')}}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    Trạng thai
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <p class="display-4 font-weight-normal" style="color:salmon; font-size: 30px;"> Lần ngã được phát hiện gần đây nhất</p>
+    <p class="display-4 font-weight-normal" style="color:yellow; font-size: 30px;"> Thời gian: {{time}}</p>
+    <img width="600" height="400" src="{{url_for('static', filename= 'last_fall/lastfall' +'.jpg' )}}" />
+
+</body>
+    
+{% endblock %}

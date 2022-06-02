@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+  Lịch sử
+{% endblock %}
+
+{% block content %}
+      <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">STT</th>
+                <th scope="col">Thời gian</th>
+                <th scope="col">Ảnh</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+          
+            {% for item in range(index) %}
+               
+                <tr>
+                    <td>{{ item +1 }}</td>
+                    <td>{{ history[item].time }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{url_for('view_page', photo = history[item].image +'.jpg' )}}"> View </a>
+                    </td>
+                    
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
